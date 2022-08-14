@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Drifter</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="/assets/img/starship.png" />
+  </head>
+  <body>
+    <div id="splash">
+      <div class="innerWrapper">
+        <h1>Space Drifter</h1>
+        <button id="start">
+          <span>Start game</span>
+          <div class="line top"></div>
+          <div class="line right"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+        </button>
+        <div class="controls">
+          <h3>Controls</h3>
+          <dl>
+            <dt>Fire Thrusters</dt>
+            <dd>
+              <div class="wasd">
+                <kbd>W</kbd>
+                <kbd>A</kbd>
+                <kbd>S</kbd>
+                <kbd>D</kbd>
+              </div>
+              <div class="wasd">
+                <kbd>↑</kbd>
+                <kbd>←</kbd>
+                <kbd>↓</kbd>
+                <kbd>→</kbd>
+              </div>
+            </dd>
+            <dt>Launch Torpedo/Missile</dt>
+            <dd>
+              <kbd>Space</kbd>
+              <kbd>Mouse Click</kbd>
+            </dd>
+            <dt>Pause/Resume</dt>
+            <dd>
+              <kbd>P</kbd>
+            </dd>
+          </dl>
+        </div>
+        <footer>
+          <nav>
+            By
+            <a
+              href="https://siddharth.gq"
+              target="_blank"
+              rel="noopener"
+              >Siddharth.S</a
+            >
+          </nav>
+        </footer>
+      </div>
+    </div>
+    <div id="paused" class="hidden">
+      <div class="innerWrapper">
+        <h2>Game Paused</h2>
+        <p>Press <kbd>P</kbd> To Resume</p>
+      </div>
+    </div>
+    <div id="gameOver" class="hidden">
+      <div class="innerWrapper">
+        <h2>Game Over</h2>
+        <h3>Your Score: <span id="finalScore"></span></h3>
+        <button id="restart" tabindex="-1">
+          <span>Restart Game</span>
+          <div class="line top"></div>
+          <div class="line right"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+        </button>
+      </div>
+    </div>
+    <div class="canvasWrapper">
+      <canvas id="game-canvas"></canvas>
+      <div id="score">0</div>
+    </div>
+    <script src="/assets/js/game.js"></script>
+  </body>
+</html>
